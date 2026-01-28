@@ -1,15 +1,26 @@
+/* =================== Material 3 Theme =================== */
 :root {
   --radius: 28px;
+
+  /* Core colors */
+  --md-sys-color-primary: #6750a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-surface: #fffbfe;
+  --md-sys-color-on-surface: #1c1b1f;
+  --md-sys-color-outline: #79747e;
+  --md-sys-color-surface-container: #f3edf7;
 }
 
-/* Base */
+/* =================== Base =================== */
 body {
   margin: 0;
   font-family: system-ui, Roboto, sans-serif;
   background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  padding-bottom: 96px; /* space for bottom nav */
 }
 
-/* Pages */
+/* =================== Pages =================== */
 .page {
   display: none;
   padding: 24px 20px 96px;
@@ -21,7 +32,7 @@ body {
   display: block;
 }
 
-/* Sections & Cards */
+/* =================== Sections & Cards =================== */
 .section {
   margin-bottom: 48px;
 }
@@ -32,7 +43,7 @@ body {
   margin-top: 16px;
 }
 
-/* Typography */
+/* =================== Typography =================== */
 h1 {
   margin-bottom: 12px;
 }
@@ -42,13 +53,14 @@ h1 {
   font-style: italic;
 }
 
-/* Links */
+/* =================== Links =================== */
 a {
   font-weight: 600;
   text-decoration: none;
+  color: var(--md-sys-color-primary);
 }
 
-/* Checklist */
+/* =================== Checklist =================== */
 .alg-list {
   margin-top: 24px;
 }
@@ -75,7 +87,26 @@ a {
   display: none;
 }
 
-/* Text size */
-html[data-text="small"] { font-size: 14px; }
-html[data-text="normal"] { font-size: 16px; }
-html[data-text="large"] { font-size: 18px; }
+/* =================== Bottom Navigation =================== */
+md-navigation-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--md-sys-color-surface-container);
+  border-top: 1px solid var(--md-sys-color-outline);
+  z-index: 10;
+}
+
+/* =================== Text Size =================== */
+html[data-text="small"] {
+  font-size: 14px;
+}
+
+html[data-text="normal"] {
+  font-size: 16px;
+}
+
+html[data-text="large"] {
+  font-size: 18px;
+}
