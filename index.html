@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedcubing Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <h1 id="page-title">Speedcubing Guide</h1>
+        <button class="icon-button" id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <!-- Main Tabs -->
+    <div class="main-tabs">
+        <button class="main-tab active" data-page="wiki">
+            <i class="fas fa-cube"></i>
+            <span>Guide</span>
+        </button>
+        <button class="main-tab" data-page="tasks">
+            <i class="fas fa-tasks"></i>
+            <span>Practice</span>
+        </button>
+        <button class="main-tab" data-page="playlists">
+            <i class="fab fa-youtube"></i>
+            <span>Playlists</span>
+        </button>
+        <button class="main-tab" data-page="settings">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </button>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="content-area" id="main-content">
+        <!-- Content loaded dynamically here -->
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="task-modal">
+        <div class="modal-content">
+            <h2>Add Practice Goal</h2>
+            <input type="text" id="new-task-input" placeholder="e.g., Practice PLL recognition...">
+            <div class="modal-actions">
+                <button class="btn secondary" id="cancel-task">Cancel</button>
+                <button class="btn primary" id="save-task">Add Goal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
