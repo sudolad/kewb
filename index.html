@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CFOP Roadmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Material Symbols (icons) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+
+  <!-- Material 3 base styles -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@material/web/styles.css"
+  />
+
+  <!-- Material Web components -->
+  <script type="module" src="https://unpkg.com/@material/web/all.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- CONTENT PAGE -->
+  <main id="content" class="page active">
+    <section class="section">
+      <h1>🟡 BASICS</h1>
+
+      <md-elevated-card class="card">
+        <a href="https://youtube.com/playlist?list=PLgHX69tbRHcdIVzt10cdVyMx3W7XkPPv4" target="_blank">
+          ▶ YouTube Playlist
+        </a>
+
+        <h3>How to practice</h3>
+        <ul>
+          <li>3–4 cases/algs a day</li>
+          <li>Learn recognition first</li>
+          <li>Muscle memory pore (bar bar korte thakba 👍)</li>
+          <li>Finger tricks aste aste try koiro 🙈</li>
+        </ul>
+
+        <p class="note">
+          *Parle age PLL shikho — OLL e alg beshi (57 ta 😭)*
+        </p>
+
+        <p>Playlist shesh hoile 2+ week practice kore then next e jayo.</p>
+      </md-elevated-card>
+    </section>
+
+    <section class="section">
+      <h1>🔵 MOSHLA</h1>
+
+      <md-elevated-card class="card">
+        <a href="https://youtube.com/playlist?list=PLgHX69tbRHcfeSRLPdme3mhpMOCTioSjm" target="_blank">
+          ▶ YouTube Playlist
+        </a>
+
+        <h3>Tips</h3>
+        <ul>
+          <li>Bad habits gula thik korar try koiro</li>
+          <li>Video er movement muscle memory te nio</li>
+          <li>Welcome to sub-30 💙</li>
+        </ul>
+      </md-elevated-card>
+    </section>
+
+    <section class="section">
+      <h1>🔴 ADVANCED</h1>
+      <p><em>In progress…</em></p>
+    </section>
+  </main>
+
+  <!-- CHECKLIST PAGE -->
+  <main id="checklist" class="page">
+    <h1>Checklist</h1>
+
+    <md-segmented-button-set id="algTabs">
+      <md-segmented-button value="oll" selected>OLL</md-segmented-button>
+      <md-segmented-button value="pll">PLL</md-segmented-button>
+    </md-segmented-button-set>
+
+    <md-elevated-card class="card progress-card">
+      <p id="progressText">0 / 0 completed</p>
+      <md-linear-progress id="progressBar" value="0"></md-linear-progress>
+    </md-elevated-card>
+
+    <div id="ollList" class="alg-list"></div>
+    <div id="pllList" class="alg-list hidden"></div>
+  </main>
+
+  <!-- SETTINGS PAGE -->
+  <main id="settings" class="page">
+    <h1>Settings</h1>
+
+    <md-elevated-card class="card">
+      <h3>Theme</h3>
+      <md-segmented-button-set id="theme">
+        <md-segmented-button value="system">System</md-segmented-button>
+        <md-segmented-button value="light">Light</md-segmented-button>
+        <md-segmented-button value="dark">Dark</md-segmented-button>
+      </md-segmented-button-set>
+
+      <h3>Text size</h3>
+      <md-segmented-button-set id="textSize">
+        <md-segmented-button value="small">Small</md-segmented-button>
+        <md-segmented-button value="normal">Normal</md-segmented-button>
+        <md-segmented-button value="large">Large</md-segmented-button>
+      </md-segmented-button-set>
+    </md-elevated-card>
+  </main>
+
+  <!-- BOTTOM NAV -->
+  <md-navigation-bar>
+    <md-navigation-tab label="Content" icon="article" onclick="showPage('content')"></md-navigation-tab>
+    <md-navigation-tab label="Checklist" icon="checklist" onclick="showPage('checklist')"></md-navigation-tab>
+    <md-navigation-tab label="Settings" icon="settings" onclick="showPage('settings')"></md-navigation-tab>
+  </md-navigation-bar>
+
+  <script src="app.js"></script>
+</body>
+</html>

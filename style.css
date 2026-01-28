@@ -1,0 +1,81 @@
+:root {
+  --radius: 28px;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: system-ui, Roboto, sans-serif;
+  background: var(--md-sys-color-surface);
+}
+
+/* Pages */
+.page {
+  display: none;
+  padding: 24px 20px 96px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Sections & Cards */
+.section {
+  margin-bottom: 48px;
+}
+
+.card {
+  padding: 24px;
+  border-radius: var(--radius);
+  margin-top: 16px;
+}
+
+/* Typography */
+h1 {
+  margin-bottom: 12px;
+}
+
+.note {
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Links */
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Checklist */
+.alg-list {
+  margin-top: 24px;
+}
+
+.alg-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--md-sys-color-surface-container);
+  margin-bottom: 12px;
+}
+
+.alg-item.completed {
+  opacity: 0.6;
+}
+
+.progress-card {
+  margin-top: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Text size */
+html[data-text="small"] { font-size: 14px; }
+html[data-text="normal"] { font-size: 16px; }
+html[data-text="large"] { font-size: 18px; }
